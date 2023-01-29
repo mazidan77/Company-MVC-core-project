@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "_manageemplayout";
+}
+@model List<employee>
+
+@{
+    int index = 1;
+}
+@section ADDEMP{
+    <a class="btn btn-success" asp-action="addemp" asp-controller="Taghelper">ADD NEW EMPLOYEE</a>
+}
+      
+   
+   
+      
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@(index++)</th>
+                    <td>@item.Fname  @item.Mname @item.Lname</td>
+        <td>@item.address</td>
+        <td>@item.salary</td>
+        <td>@item.SSN</td>
+
+
+
+                    <td><a class="btn btn-info" asp-controller="Taghelper" asp-action="getinfoemp" asp-route-id="@item.SSN">Details</a> <a class="btn btn-primary" asp-controller="Taghelper" asp-action="editemployee" asp-route-id="@item.SSN">Edit</a> <a class="btn btn-danger" asp-controller="Taghelper" asp-action="deleteemp" asp-route-id="@item.SSN">Delete</a></td>
+                </tr>
+            }
+
+
+
+
+@*
+        </tbody>
+    </table>
+
+</div>*@
+
+                            

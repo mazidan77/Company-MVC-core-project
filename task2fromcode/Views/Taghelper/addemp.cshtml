@@ -1,0 +1,71 @@
+﻿
+
+
+@model employee
+@{
+    Layout = "_blanklayout";
+}
+
+   <h1 class="h3 mb-4 text-gray-800">Add New Employee</h1>
+<form asp-controller="Taghelper" asp-action="afteraddemp">
+
+    <div class="form-group">
+        <label asp-for="Fname">First Name:</label>
+        <input asp-for="Fname" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Mname">Midle Name:</label>
+        <input asp-for="Mname" class="form-control">
+         </div>
+
+
+    <div class="form-group">
+        <label asp-for="Lname">Last Name:</label>
+        <input asp-for="Lname" class="form-control">
+           </div>
+
+       
+        
+           
+       
+           <div class="form-group">
+        <label asp-for="SSN">SSN:</label>
+        <input asp-for="SSN" class="form-control">
+           </div>
+
+
+
+
+    <div class="form-group">
+        <label asp-for="salary">Salary:</label>
+        <input asp-for="salary" class="form-control">
+           </div>
+
+
+
+    <div class="form-group">
+        <label asp-for="address">Address:</label>
+        <input asp-for="address" class="form-control">
+           </div>
+
+
+
+    <div class="form-group">
+                  <label asp-for="superid">SuperVisor</label>
+
+
+        <select asp-for="superid" asp-items="ViewBag.q" class="form-control">
+                    <option value="">select supervisor</option>
+                    
+                    }
+                </select>
+           </div>
+
+             
+
+    
+
+
+    <input type="submit" value="Submit">
+</form>
